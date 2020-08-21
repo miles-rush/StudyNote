@@ -8,7 +8,7 @@
 
 ​	
 
-```
+```xml
 <dependencies>
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -48,7 +48,7 @@
 
 ​	
 
-```
+```yml
 server:
   port: 8055
   servlet:
@@ -67,7 +67,7 @@ server:
 
 ​	
 
-```
+```java
 /**
  * Springboot启动类
  */

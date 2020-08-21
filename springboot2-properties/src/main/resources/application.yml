@@ -1,0 +1,7 @@
+server:
+  port: 8055
+  servlet:
+    context-path: /study
+spring:
+  profiles:
+    active: prod
