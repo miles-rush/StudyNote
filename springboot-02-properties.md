@@ -147,9 +147,9 @@ public class DeveloperProperty {
 
 > list set   
 
-<img src="D:\PostgraduateFolder\SpringbootDemo\Notes\StudyNote\files\file02\list1.png" style="zoom:50%;" />
+<img src="files\file02\list1.png" style="zoom:50%;" />
 
-<img src="D:\PostgraduateFolder\SpringbootDemo\Notes\StudyNote\files\file02\list2.png" style="zoom:50%;" />
+<img src="files\file02\list2.png" style="zoom:50%;" />
 
 > 自定义类型
 
