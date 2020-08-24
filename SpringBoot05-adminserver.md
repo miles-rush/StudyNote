@@ -72,6 +72,6 @@ server.port=8000
 
 adminclient中出现上信息时，表明adminclient在adminserver中注册成功，此时可以访问adminserver的地址进入ui界面，如下图：
 
-![](files\file05\show.png)
+![](/files/file05/show.png)
 
 在该界面中，可以查看adminclient应用的可视化信息
