@@ -1,0 +1,10 @@
+2020-08-24 18:44:14,619 [main] ERROR [com.study.logback.LogbackApplication] LogbackApplication.java:19 - Spring boot启动初始化了 128 个 Bean
+2020-08-24 18:44:14,621 [main] ERROR [com.study.logback.LogbackApplication] LogbackApplication.java:25 - 【SpringBootDemoLogbackApplication】启动异常：
+java.lang.ArithmeticException: / by zero
+	at com.study.logback.LogbackApplication.main(LogbackApplication.java:23)
+2020-08-24 18:46:16.683 ERROR 3700 --- [main] com.study.logback.LogbackApplication     LogbackApplication.java:19: Spring boot启动初始化了 128 个 Bean
+2020-08-24 18:46:16.685 ERROR 3700 --- [main] com.study.logback.LogbackApplication     LogbackApplication.java:25: 【SpringBootDemoLogbackApplication】启动异常：
+
+java.lang.ArithmeticException: / by zero
+	at com.study.logback.LogbackApplication.main(LogbackApplication.java:23)
+

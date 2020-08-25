@@ -1,0 +1,32 @@
+2020-08-24 18:44:13,208 [main] INFO  [com.study.logback.LogbackApplication] StartupInfoLogger.java:55 - Starting LogbackApplication on LAPTOP-04NRFO27 with PID 9244 (D:\PostgraduateFolder\SpringbootDemo\Notes\StudyNote\springboot6-logback\target\classes started by 75584 in D:\PostgraduateFolder\SpringbootDemo\Notes\StudyNote\springboot6-logback)
+2020-08-24 18:44:13,211 [main] INFO  [com.study.logback.LogbackApplication] SpringApplication.java:651 - No active profile set, falling back to default profiles: default
+2020-08-24 18:44:14,174 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8050 (http)
+2020-08-24 18:44:14,186 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-08-24 18:44:14,186 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-08-24 18:44:14,188 [main] INFO  [org.apache.catalina.core.AprLifecycleListener] DirectJDKLog.java:173 - Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-08-24 18:44:14,188 [main] INFO  [org.apache.catalina.core.AprLifecycleListener] DirectJDKLog.java:173 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-08-24 18:44:14,188 [main] INFO  [org.apache.catalina.core.AprLifecycleListener] DirectJDKLog.java:173 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-08-24 18:44:14,192 [main] INFO  [org.apache.catalina.core.AprLifecycleListener] DirectJDKLog.java:173 - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-08-24 18:44:14,300 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/study]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-08-24 18:44:14,300 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:284 - Root WebApplicationContext: initialization completed in 1051 ms
+2020-08-24 18:44:14,462 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-24 18:44:14,604 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8050 (http) with context path '/study'
+2020-08-24 18:44:14,614 [main] INFO  [com.study.logback.LogbackApplication] StartupInfoLogger.java:61 - Started LogbackApplication in 2.103 seconds (JVM running for 3.294)
+2020-08-24 18:44:14,618 [main] INFO  [com.study.logback.LogbackApplication] LogbackApplication.java:17 - Spring boot启动初始化了 128 个 Bean
+2020-08-24 18:44:14,619 [main] WARN  [com.study.logback.LogbackApplication] LogbackApplication.java:18 - Spring boot启动初始化了 128 个 Bean
+2020-08-24 18:46:15.157  INFO 3700 --- [main] com.study.logback.LogbackApplication     : Starting LogbackApplication on LAPTOP-04NRFO27 with PID 3700 (D:\PostgraduateFolder\SpringbootDemo\Notes\StudyNote\springboot6-logback\target\classes started by 75584 in D:\PostgraduateFolder\SpringbootDemo\Notes\StudyNote\springboot6-logback)
+2020-08-24 18:46:15.160  INFO 3700 --- [main] com.study.logback.LogbackApplication     : No active profile set, falling back to default profiles: default
+2020-08-24 18:46:16.161  INFO 3700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8050 (http)
+2020-08-24 18:46:16.169  INFO 3700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-24 18:46:16.170  INFO 3700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-08-24 18:46:16.171  INFO 3700 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-08-24 18:46:16.174  INFO 3700 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-08-24 18:46:16.175  INFO 3700 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-08-24 18:46:16.178  INFO 3700 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-08-24 18:46:16.277  INFO 3700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/study]  : Initializing Spring embedded WebApplicationContext
+2020-08-24 18:46:16.278  INFO 3700 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1068 ms
+2020-08-24 18:46:16.462  INFO 3700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-24 18:46:16.670  INFO 3700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8050 (http) with context path '/study'
+2020-08-24 18:46:16.681  INFO 3700 --- [main] com.study.logback.LogbackApplication     : Started LogbackApplication in 2.138 seconds (JVM running for 3.55)
+2020-08-24 18:46:16.682  INFO 3700 --- [main] com.study.logback.LogbackApplication     : Spring boot启动初始化了 128 个 Bean
+2020-08-24 18:46:16.683  WARN 3700 --- [main] com.study.logback.LogbackApplication     : Spring boot启动初始化了 128 个 Bean
