@@ -1,0 +1,9 @@
+server:
+  port: 8050
+  servlet:
+    context-path: /study
+spring:
+  freemarker:
+    suffix: .ftl
+    cache: false
+    charset: UTF-8
