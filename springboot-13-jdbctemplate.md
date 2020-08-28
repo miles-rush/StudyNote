@@ -125,8 +125,11 @@ logging:
 **注解的语法与定义形式**
 
 （1）以`@interface`关键字定义
+
 （2）注解包含成员，成员以无参数的方法的形式被声明。其方法名和返回值定义了该成员的名字和类型。
+
 （3）成员赋值是通过`@Annotation(name=value)`的形式。
+
 （4）注解需要标明注解的生命周期，注解的修饰目标等信息，这些信息是通过元注解实现。
 
 ------
@@ -146,7 +149,9 @@ logging:
 ##### 注解的生命周期
 
 1、RetentionPolicy.SOURCE：注解只保留在源文件，当Java文件编译成class文件的时候，注解被遗弃；
+
 2、RetentionPolicy.CLASS：注解被保留到class文件，但jvm加载class文件时候被遗弃，这是默认的生命周期；
+
 3、RetentionPolicy.RUNTIME：注解不仅被保存到class文件中，jvm加载class文件之后，仍然存在；
 
 **1. @Target**
@@ -831,3 +836,54 @@ public class UserController {
     }
 }
 ```
+
+------
+
+#### 总结
+
+1.加密盐=加密盐前缀+随即的ID(UUID)
+
+```java
+String salt = IdUtil.simpleUUID();
+String pass = SecureUtil.md5(rawPass + Const.SALT_PREFIX + salt);
+```
+
+2.数据库参数配置
+
+3.自定义注解 
+
+`@interface` 
+
+`@Retention(RetentionPolicy.RUNTIME)`注解的生命周期
+
+`@Target({ElementType.TYPE})`注解可使用的地方
+
+4.Dao
+
+- 泛型中的T.class获取方法
+
+  `clazz = (Class<T>) ((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];`
+
+- `StrUtil.repeatAndJoin()` 重复某个字符串并通过分界符连接
+
+```java
+StrUtil.repeatAndJoin("?", 5, ",")   = "?,?,?,?,?"
+StrUtil.repeatAndJoin("?", 0, ",")   = ""
+StrUtil.repeatAndJoin("?", 5, null) = "?????"
+```
+
+- steam()的系列用法
+- `StrUtil.appendIfMissing()` 如果给定字符串不是以给定的一个或多个字符串为结尾，则在尾部添加结尾字符串`StrUtil.appendIfMissing(s, " = ?")`
+
+- `ReflectUtil.getFieldValue()`获取类中字段对应的值
+
+- `RowMapper`可以将数据中的每一行数据封装成用户定义的类
+
+- `BeanUtil.fillBeanWithMap()`使用Map填充Bean对象，可配置将下划线转换为驼峰 `isToCamelCase`(参数3) - 是否将下划线模式转换为驼峰模式
+
+- 如果存在该元素的指定类型的注释，则返回这些注释，否则返回 null
+   `Table tableAnnotation = t.getClass().getAnnotation(Table.class);`
+
+- `ReflectUtil.getFields()`获得一个类中所有字段列表，包括其父类中的字段
+
+- `@Repository`注解在持久层中，具有将数据库操作抛出的原生异常翻译转化为spring的持久层异常的功能。
