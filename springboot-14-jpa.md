@@ -187,12 +187,12 @@ app.datasource.password=dbpass
 @Configuration
 @EnableTransactionManagement //开启事务注解
 @EnableJpaAuditing //开启审计功能
-//其他配置项 
+//其他配置项 repository包位置指定 事务管理器工厂指定和方法中的名字要一样
 @EnableJpaRepositories(basePackages = "com.study.jpa.repository", transactionManagerRef = "jpaTransactionManager")
 public class JpaConfig {
     // 数据源创建
     @Bean
-    @ConfigurationProperties(prefix = "spring.datasource")
+    @ConfigurationProperties(prefix = "spring.datasource")// 从配置文件中读取
     public DataSource dataSource() {
         return DataSourceBuilder.create().build();
     }
@@ -325,7 +325,7 @@ EntityManager 对象在一组实体类与底层数据源之间进行 O/R 映射�
 
 `PlatformTransactionManager`
 
-事务管理器
+事务管理器 事务配置
 
 > 参考资料：https://juejin.im/post/6844904086341419021
 
@@ -334,7 +334,7 @@ EntityManager 对象在一组实体类与底层数据源之间进行 O/R 映射�
 ```java
 // 用在父类上面。当这个类肯定是父类时，加此标注。如果改成@Entity，则继承后，多个类继承，只会生成一个表，而不是多个继承，生成多个表
 @MappedSuperclass
-@EntityListeners(AuditingEntityListener.class) //JPA的审计功能
+@EntityListeners(AuditingEntityListener.class) // JPA的审计功能
 @Data
 public abstract class AbstractAuditModel implements Serializable {
     /**
@@ -381,7 +381,6 @@ public abstract class AbstractAuditModel implements Serializable {
 
 - AUTO：主键由程序控制
 
-  
 
 ------
 
@@ -403,14 +402,23 @@ TemporalType.TIMESTAMP（日期和时间）
 `@Column(name = "create_time", nullable = false, updatable = false)`
 
 > **name 可选,字段名(默认值是属性名)**
+>
 > unique 可选,是否在该字段上设置唯一约束(默认值false)
+>
 > **nullable 可选,是否设置该字段的值可以为空(默认值false)**
+>
 > insertable 可选,该字段是否作为生成的insert语句中的一个字段(默认值true)
+>
 > **updatable 可选,该字段是否作为生成的update语句中的一个字段(默认值true)**
+>
 > **columnDefinition 可选: 为这个特定字段覆盖sql DDL片段 （这可能导致无法在不同数据库间移植）**
+>
 > table 可选,定义对应的表(默认为主表)
+>
 > length 可选,字段长度(默认值255)
+>
 > precision可选,字段数字精精度(默认值0)
+>
 > scale 可选,如果字段数字刻度可用,在此设置(默认值0)
 
 ------
@@ -739,8 +747,15 @@ Optional 类的引入很好的解决空指针异常。
 
 ------
 
+#### JPA分页
 
-
+```java
+Integer currentPage = 0;
+Integer pageSize = 5;
+Sort sort = Sort.by(Sort.Direction.DESC, "id");// 排序方式
+PageRequest pageRequest = PageRequest.of(currentPage, pageSize, sort);// PageRequest的创建使用of
+Page<User> userPage = userDao.findAll(pageRequest);
+```
 #### DepartmentDaoTest.java
 
 ```java
@@ -800,3 +815,9 @@ public class DepartmentDaoTest {
     }
 }
 ```
+
+
+
+#### 注：
+
+**Spring Data JPA 官方文档：https://docs.spring.io/spring-data/jpa/docs/current/reference/html/**
