@@ -1,4 +1,4 @@
-# SpringBoot14-JPA
+# SpringBoot14-jpa
 
 > Spring Boot使用JPA操作数据库
 
